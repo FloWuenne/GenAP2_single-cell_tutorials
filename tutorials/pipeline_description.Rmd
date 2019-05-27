@@ -1,0 +1,10 @@
+---
+title: "pipeline_description"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pipeline description and details about software implementations
