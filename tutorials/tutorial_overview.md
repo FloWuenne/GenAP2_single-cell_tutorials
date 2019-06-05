@@ -30,6 +30,8 @@ own with your favourite tools. Full pipeline workflows are marked
 
 [I have a processed Seurat object (Seurat v2.3.4)](#part3)
 
+<a id="part1"></a>
+
 # I have raw FASTQ files for my samples
 
 If you are starting off with raw FASTQ files for your samples, choose
@@ -63,6 +65,8 @@ are currently providing the transcriptome references for Human
     galaxy as .rds file and load it into
 R\!
 
+<a id="part2"></a>
+
 # I have a DGE file (matrix of cells x genes) containing UMI counts form 10x CellRanger
 
 If you have data that has been processed using 10x CellRannger software
@@ -84,6 +88,8 @@ return a .Rds object that contains clustering information in tSNE space
 and a marker list. The Scanpy workflow will return an anndata object
 with clustering information and a marker list.
 
+<a id="part3"></a>
+
 # I have a processed Seurat object (Seurat v2.3.4)
 
 If you have already analyzed your data using Seurat v2.3.4 and have an
@@ -93,6 +99,8 @@ annotated .rds object with tSNE mappings, use the following workflow:
 Seurat .rds object alongside a marker list from Seurats `FindAllMarker`
 function as input and reformat this data for visualization using the
 GenAP2 app.
+
+<a id="Upload_files"></a>
 
 # How to upload files to your Galaxy instance
 
