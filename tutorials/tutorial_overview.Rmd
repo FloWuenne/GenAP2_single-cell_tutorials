@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-Welcome to the tutorial pages for the single-cell RNA-seq data processing pipelines implemented in GenAP2. We aim to support a broad range of different users and therefore implemented a number of different starting points for using our pipelines.
+Welcome to the tutorial pages for the single-cell RNA-seq (scRNA-seq) data processing pipelines implemented in GenAP2. We aim to support a broad range of different users and therefore implemented a number of different starting points for using the pipelines.
 
 If you are interested in the details and setup of the entire processing pipeline, please consult the following manual page:
 
