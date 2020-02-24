@@ -133,8 +133,8 @@ make it easier to streamline analysis and to get started however, we
 have also prepared some standard single-cell workflows, that only
 require you to select your data and click start. To know which workflow
 to choose in general, see [GenAP2 single-cell tutorials
-overview](./tutorials/tutorial_overview.md) for more details. Here we
-will go through 2 standard examples.
+overview](./tutorial_overview.md) for more details. Here we will go
+through 2 standard examples.
 
 \*\* 1) Starting from FASTQ files\*\*
 
