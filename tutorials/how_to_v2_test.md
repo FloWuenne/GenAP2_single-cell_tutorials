@@ -17,6 +17,18 @@ Galaxy. followed by running 2 standard pipelines for single-cell
 analysis (Seurat and Scanpy). Finally, we will export the data to the
 Filebrowser and import our clustering results to SCAP.
 
+## Reporting problems
+
+If you encounter any bugs or issues with any of the tools in GenAP2,
+please send an email with your problem described in detail to the
+following address:
+
+**<support@genap.ca>**
+
+This allows us to keep track of issues and resolve them in an organized
+manner. Thank you for your collaboration in using this way of reporting
+problems\!s
+
 ## Using GenAP v2-test
 
 First we will go to the new GenAP hub and login using our Compute Canada

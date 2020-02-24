@@ -15,6 +15,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this markdown, we will explore, how to use the single-cell tools implemented in the GenAP v2 galaxy  alongside the visualisation app SCAP. The exaplanations in this document are currently geared for usage on the v2-test server but should work just as well for the final implementations on the v2 production server. We will start with a short explanation of how to use the GenAP2 portal and how to import data into Galaxy. followed by running 2 standard pipelines for single-cell analysis (Seurat and Scanpy). Finally, we will export the data to the Filebrowser and import our clustering results to SCAP.
 
+## Reporting problems
+
+If you encounter any bugs or issues with any of the tools in GenAP2, please send an email with your problem described in detail to the following address:
+
+**support@genap.ca**
+
+This allows us to keep track of issues and resolve them in an organized manner. Thank you for your collaboration in using this way of reporting problems!s
+
 ## Using GenAP v2-test
 
 First we will go to the new GenAP hub and login using our Compute Canada (CC) credentials. Go to [https://v2-test.genap.ca/] (https://v2-test.genap.ca/) and login using your CC login details (the same information you would use to access a computational cluster like Beluga or Cedar).
