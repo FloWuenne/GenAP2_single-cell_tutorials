@@ -4,6 +4,8 @@
 
 This repo holds the tutorials for the GenAP2 implementations of single-cell analysis pipelines.
 
-To begin exploring the tutorials, please navigate to the overview page:
+To begin exploring the tutorials, please choose an option below to start:
 
-[Start here](./tutorials/tutorial_overview.md)
+### [GenAP2 single-cell tutorials overview](./tutorials/tutorial_overview.md)
+
+### [How to use Galaxy and SCAP in GenAP v2-test](./tutorials/how_to_v2_test.md)

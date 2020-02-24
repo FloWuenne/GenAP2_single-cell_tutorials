@@ -37,31 +37,29 @@ To start with this tutorial, upload your .gz or .fastq files to your galaxy inst
 
 Once youre files are uploaded, select one of the following workflows. We are currently providing the transcriptome references for Human (H.sapiens, Gencode v29, ) and Mouse (M.musculus,Gencode VM20, )
 
-* **alevin_seurat_shiny** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Seurat (v2.3.0) to cluster and annotate cells and then format the seurat output for visualization in the GenAP2 Rshiny app.
+* **salmon-alevin_seuratV2.3.4_SCAP** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Seurat (v2.3.4) to cluster and annotate cells and then format the seurat output for visualization in SCAP.
 
-* **alevin_scanpy_shiny** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Scanpy (1.4.2) to cluster and annotate cells and then format the seurat output for visualization in the GenAP2 Rshiny app.
+* **salmon-alevin_scanpyV1.3.2_SCAP** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Scanpy (1.4.2) to cluster and annotate cells and then format the seurat output for visualization in the SCAP.
 
-* **alevin_only** : This workflow will only run salmon alevin on your file to map, quantify and assign your reads from your fast file. If you want to use the sparseMatrix downstream, just save it from the galaxy as .rds file and load it into R!
+* **salmon-alevin_only** : This workflow will only run salmon alevin on your file to map, quantify and assign your reads from your fast file. If you want to use the sparseMatrix downstream, just save it from the galaxy as .rds file and load it into R!
 
 <a id="part2"></a>
 
-# I have a DGE file (matrix of cells x genes) containing UMI counts form 10x CellRanger {#part2}
+# I have a results folder from 10x CellRanger or a UMI matrix (genes (rows) x cells (columns)) {#part2}
 
 If you have data that has been processed using 10x CellRannger software and you want to use either Seurat or Scanpy to analyze the data and then visualize is in shiny, use one of the following workflows:
 
-* **10x_seurat_shiny** : This workflow will run Seurat (v2.3.0) on your 10x data to cluster and annotate cells and then format the seurat output for visualization in the GenAP2 Rshiny app.
+* **10x_seuratV2.3.4_SCAP** : This workflow will run Seurat (v2.3.0) on your 10x data to cluster and annotate cells and then format the seurat output for visualization in SCAP.
 
-* **10x_scanpy_shiny** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Scanpy (1.4.2) to cluster and annotate cells and then format the seurat output for visualization in the GenAP2 Rshiny app.
-
-Otherwise, you can also run either of these complete tools by using the **seurat_only** or **scanpy_only** workflows. The Seurat workflow will return a .Rds object that contains clustering information in tSNE space and a marker list. The Scanpy workflow will return an anndata object with clustering information and a marker list.
+* **10x_scanpyV1.3.2_SCAP** : This workflow will run salmon alevin to map, quantify and assign your reads from .fastq files. It will afterwards run Scanpy (1.4.2) to cluster and annotate cells and then format the seurat output for visualization in SCAP.
 
 <a id="part3"></a>
 
 # I have a processed Seurat object (Seurat v2.3.4) {#part3}
 
-If you have already analyzed your data using Seurat v2.3.4 and have an annotated .rds object with tSNE mappings, use the following workflow:
+If you have already analyzed your data using Seurat or Scanpy and have an annotated object with tSNE or UMAP mappings, use the following workflow:
 
-**format_seurat_for_shiny** : This tool will take  a fully clustered Seurat .rds object alongside a marker list from Seurats `FindAllMarker` function as input and reformat this data for visualization using the GenAP2 app.
+**format_data_for_SCAP** : This tool will take  a fully processed Seurat pr Scanpy object and reformat this data for visualization using SCAP.
 
 <a id="Upload_files"></a>
 
@@ -71,7 +69,7 @@ If you have already analyzed your data using Seurat v2.3.4 and have an annotated
 
  ![](../www/canarie-logo.png) 
  
-This project was funded by [Canarie Inc. (Ottawa, Canada)](https://www.canarie.ca/) under the grant: Research Software Program Funding Call # 2b – RS-311.
+This project is funded by [Canarie Inc. (Ottawa, Canada)](https://www.canarie.ca/) under the grant: Research Software Program Funding Call # 2b – RS-311 and .
 
  ![](../www/genap_logo.png) 
 
