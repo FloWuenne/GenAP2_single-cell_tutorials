@@ -142,24 +142,29 @@ If you have a pair of .fastq files for your data, we need to start with
 a pipeline that will quantify gene expression from the FASTQ files.
 Currently, the only tool implemented to quantify gene expression is
 salmon-alevin, but we are working hard to get CellRanger and
-kallisto-bustools integrated into Galaxy as soon as possible\!
+kallisto-bustools integrated into Galaxy as soon as possible\! You can
+directly run salmon-alevin on your pair of FASTQ files, just make sure,
+you choose the right technology and reference (Human or Mouse only at
+the moment\!).
 
-To run a workflow starting with salmon-alevin, click on **All
-Workflows** at the bottom of the action menu on the left.
+To import the two main workflows starting with salmon-alevin, click on
+Shared Data ==\> Wrkflows at the top Panel. There, you should be able to
+see 2 workflow: 1) alevin\_seurat 2) alevin\_scanpy
 
-![](../www/GenAP_all_workflows.png)
+Import both of these workflows. They should now appear in the list of
+workflows on the left menu, under All Workflows.
 
 In this example we will perform quantification using salmon-alevin,
 followed by analysis using Scanpy. If you want to modify the workflow or
 see all of the commands that will be run, you can click on the name of
 the pipeline. To set up a workflow, click the arrow next to the workflow
-**salmon-alevin\_scanpyV1.3.2\_SCAP** and select **Run**. This will open
-a long parameter list that contains all of the commands run by the
-pipeline. We set up the pipeline with sensible defaults so you can
-generally just select your files and run it, but feel free to modify any
-parameters as you need\! For this pipeline, select your two FASTQ files
-from the right menu and insert the R1 FASTQ file and the R2 FASTQ file
-in the corresponding places.
+**alevin\_scanpy** and select **Run**. This will open a long parameter
+list that contains all of the commands run by the pipeline. We set up
+the pipeline with sensible defaults so you can generally just select
+your files and run it, but feel free to modify any parameters as you
+need\! For this pipeline, select your two FASTQ files from the right
+menu and insert the R1 FASTQ file and the R2 FASTQ file in the
+corresponding places.
 
 **Important note: Click on Salmon Alevin and make sure, that you select
 the appropriate reference transcriptome (Human, Mouse) and scRNA-seq
@@ -172,18 +177,16 @@ click on ![](../www/GenAP_run_workflow.png). This will launch your
 entire job. Every command run by the workflow will be executed in order
 and if it finishes correctly will apear green in the right hand menu. If
 everything works without a problem, you will see many green jobs
-appearing on the right over time. Once the pipeline is finished, the
-data will be automatically transferred to the File Browser.
+appearing on the right over time.
 
-\*\* 2) Starting from 10x CellRanger files or a DGE\*\*
+\*\* 2) Starting from 10x CellRanger files\*\*
 
-If insted you already have quantification either from CellRanger or any
-other piepline (such as Drop-seq tools for example), we will use either
-of these pipelines in this example:
+If insted you already have quantification from CellRanger, use one of
+these two pipelines:
 
-  - **10x\_scanpyV1.3.2\_SCAP**
+  - **10x\_seurat**
 
-  - **DGE\_scanpyV1.3.2\_SCAP**
+  - **10x\_scanpy**
 
 Again, set up the parameters according to your data and run the
 worfklows, similar to before.
